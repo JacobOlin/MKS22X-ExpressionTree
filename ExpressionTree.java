@@ -42,8 +42,11 @@ public class ExpressionTree{
   private boolean hasChildren() {
     return left != null && right != null;
   }
-  
+
   public String toString() {
-    return "";
+    if (isValue()) {
+      return getValue() + "";
+    }
+    return "(" + getLeft() + " " + getOp() + " " + getRight() + ")";
   }
 }
