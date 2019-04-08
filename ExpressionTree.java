@@ -72,6 +72,15 @@ public class ExpressionTree{
   }
 
   private double apply(char op,double a,double b) {
-    return 0.0;
+    if (op == '+') {
+      return a + b;
+    }
+    if (op == '-') {
+      return a - b;
+    }
+    if (op == '*') {
+      return a * b;
+    }
+    return a/b;
   }
 }
