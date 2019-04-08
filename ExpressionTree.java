@@ -63,4 +63,15 @@ public class ExpressionTree{
     }
     return getOp() + " " + getLeft().toStringPrefix() + " " + getRight().toStringPrefix();
   }
+
+  public double evaluate() {
+    if (isValue()) {
+      return getValue();
+    }
+    return apply(getOp(),getLeft().evaluate(),getRight().evaluate());
+  }
+
+  private double apply(char op,double a,double b) {
+    return 0.0;
+  }
 }
